@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Alura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Satisfy&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <header>
+        <img  src="./img/Vector.png" alt="logo de alura" class="logo">
+    </header>
+    <main>
+        <section class="area__encriptado" >
+            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aquí" alt="area de texto a desencriptar"></textarea>
+            <div class="infor">
+                <img src="./img/icons8-brake-warning-24.png" alt="alerta de como ingresar texto">
+                <!--<i class='bx bxs-error-circle'></i>-->
+                <h6 class="información">Solo letras minúsculas y sin acentos</h6>
+            </div>
+            <div class="botones">
+                <button class="btn-encriptar" onclick="btnEncriptar()" >Encriptar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()" >Desencriptar</button>
+            </div>
+        </section>
+        <section class="textArea__Desencriptado">
+            <textarea id="myTextarea" class="mensaje"  cols="30" rows="15" alt="area de texto encriptado"></textarea>
+            <div class="divCopiar">
+                <button id="btnCopy" class="copiar" onclick="myFunction()" >Copiar</button>
+            </div>
+        </section>
+        <div>        
+
+    </main>
+    <footer>
+        <div class="divParrafo">
+            <p class="parrafo_footer">Trabajo realizado por Omar Daniel Molares para</p>
+            <p class="parrafo_Allura">Alura LATAM</p>
+        </div>
+        <div class="redes_sociales" alt="redes sociales">         
+            <a href="">
+                <i class='bx bxl-instagram-alt bx-lg bx-border-circle bx-tada'></i>
+            </a>
+            <a href="">
+                <i class='bx bxs-envelope bx-lg bx-border-circle bx-tada'></i>
+            </a>
+            <a href="https://www.linkedin.com/in/omar-daniel-molares-4504a1177/" target="_blank">
+                <i class='bx bxl-linkedin-square bx-lg bx-border-circle bx-tada'></i>
+            </a>
+            <a href="">
+                <i class='bx bxl-github bx-lg bx-border-circle bx-tada' ></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="proyecto.js"></script>
+
+    
+</body>
+</html>
