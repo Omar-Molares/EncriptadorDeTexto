@@ -3,12 +3,15 @@ const mensaje = document.querySelector(".mensaje");
 
 
 function btnEncriptar(){
+  if(validarEntrada(textArea.value)){
   const textoEncriptado = encriptar(textArea.value)
   mensaje.value = textoEncriptado
   textArea.value = "";
   mensaje.style.backgroundImage = "none";
   document.getElementById("btnCopy").style.visibility = "visible"; 
-  
+  }else{
+    alert("Por Favor, ingrese solo letras minúsculas y letras.")
+  }
 }
 
 function encriptar(stringEncriptada) {
@@ -24,10 +27,14 @@ function encriptar(stringEncriptada) {
 }
 
 function btnDesencriptar(){
+  if(validarEntrada(textArea.value)){
   const textoEncriptado = desencriptar(textArea.value)
   mensaje.value = textoEncriptado
   textArea.value = "";
   mensaje.style.backgroundImage = "none";
+  }else{
+     alert("Por favor, ingresar solo letras minúsculas y espacios.")
+  }
 }
 
 
@@ -59,6 +66,11 @@ function myFunction() {
   mensaje.style.backgroundImage = "url()";
   document.getElementById("btnCopy").style.visibility = "hidden";
   
+}
+
+function validarEntrada(texto) {
+  const regex = /^[a-z\s]+$/;  // Solo letras minúsculas y espacios
+  return regex.test(texto);
 }
 
 
